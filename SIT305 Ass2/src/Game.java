@@ -36,7 +36,7 @@ public class Game {
 		
 		titleNamePanel = new JPanel();
 		titleNamePanel.setBounds(100, 100, 600, 150);
-		titleNamePanel.setBackground(Color.black);
+		titleNamePanel.setBackground(Color.blue);
 		titleNameLabel = new JLabel("Eriekith");
 		titleNameLabel.setForeground(Color.white);
 		titleNameLabel.setFont(titleFont);
