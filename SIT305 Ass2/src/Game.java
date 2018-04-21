@@ -73,11 +73,11 @@ public class Game {
 		startButtonPanel.add(startButton);
 		exitButtonPanel.add(exitButton);
 		
-			
 		con.add(titleNamePanel);
 		con.add(startButtonPanel);
 		con.add(loadButtonPanel);
-		con.add(exitButtonPanel);
+		con.add(exitButtonPanel);	
+		
 		
 	}
 
