@@ -10,7 +10,6 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 
 
-
 public class Game {
 	JFrame window;
 	Container con;
@@ -37,7 +36,7 @@ public class Game {
 		
 		titleNamePanel = new JPanel();
 		titleNamePanel.setBounds(100, 100, 600, 150);
-		titleNamePanel.setBackground(Color.blue);
+		titleNamePanel.setBackground(Color.black);
 		titleNameLabel = new JLabel("Eriekith");
 		titleNameLabel.setForeground(Color.white);
 		titleNameLabel.setFont(titleFont);
@@ -75,7 +74,6 @@ public class Game {
 		exitButtonPanel.add(exitButton);
 		
 			
-		
 		con.add(titleNamePanel);
 		con.add(startButtonPanel);
 		con.add(loadButtonPanel);
