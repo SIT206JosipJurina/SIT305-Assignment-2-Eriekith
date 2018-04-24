@@ -36,6 +36,8 @@ public class Main {
 	
 	public Main(){
 		
+		//Creating the Main Menu Screen
+		
 		window = new JFrame();
 		window.setSize(800, 600);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -44,6 +46,7 @@ public class Main {
 		window.setVisible(true);
 		con = window.getContentPane();
 		
+		// Title 		
 		titleNamePanel = new JPanel();
 		titleNamePanel.setBounds(100, 100, 600, 150);
 		titleNamePanel.setBackground(Color.black);
@@ -51,6 +54,7 @@ public class Main {
 		titleNameLabel.setForeground(Color.white);
 		titleNameLabel.setFont(titleFont);	
 		
+		//Start Button
 		startButtonPanel = new JPanel();
 		startButtonPanel.setBounds(100, 400, 200, 100);
 		startButtonPanel.setBackground(Color.black);
@@ -62,6 +66,7 @@ public class Main {
 		startButton.addActionListener(tsHandler);
 		startButton.setFocusPainted(false);
 		
+		//Load Button
 		loadButtonPanel = new JPanel();
 		loadButtonPanel.setBounds(300, 400, 200, 100);
 		loadButtonPanel.setBackground(Color.black);
@@ -71,6 +76,7 @@ public class Main {
 		loadButton.setForeground(Color.white);
 		loadButton.setFont(normalFont);
 		
+		//Exit Button
 		exitButtonPanel = new JPanel();
 		exitButtonPanel.setBounds(500, 400, 200, 100);
 		exitButtonPanel.setBackground(Color.black);
