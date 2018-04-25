@@ -1,3 +1,4 @@
+package com.tcg.json;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -5,6 +6,7 @@ import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,7 +14,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
+import org.json.JSONObject;
+
+
 public class Main {
+	//variables
 	
 	JFrame window;
 	Container con;
@@ -27,9 +33,13 @@ public class Main {
 	
 	TitleScreenHandler tsHandler = new TitleScreenHandler();
 	ChoiceHandler choiceHandler = new ChoiceHandler();
+	ExitHandler exitHandler = new ExitHandler();
 
 
 	public static void main(String[] args) {
+		
+		JSONObject obj = JSONUtils.getJSONObjectFromFile("/openfields.json");
+		
 
 		new Main();
 	}
@@ -40,7 +50,8 @@ public class Main {
 		
 		window = new JFrame();
 		window.setSize(800, 600);
-		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//window.dispatchEvent(new WindowEvent(window, WindowEvent.WINDOW_CLOSING));
+		window.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE);
 		window.getContentPane().setBackground(Color.black);
 		window.setLayout(null);
 		window.setVisible(true);
@@ -96,6 +107,9 @@ public class Main {
 		con.add(loadButtonPanel);
 		con.add(exitButtonPanel);
 	}
+	public void exitGame() {
+		 window.dispose();
+	}
 	
 	public void createGameScreen(){
 		
@@ -109,13 +123,13 @@ public class Main {
 		mainTextPanel.setBackground(Color.black);
 		con.add(mainTextPanel);
 		
-		mainTextArea = new JTextArea("This is the main text are. This game is going to be great. I'm sure of it!!!!!!!");
+		mainTextArea = new JTextArea("");
 		mainTextArea.setBounds(100, 100, 600, 250);
 		mainTextArea.setBackground(Color.black);
 		mainTextArea.setForeground(Color.white);
 		mainTextArea.setFont(normalFont);
 		mainTextArea.setLineWrap(true);
-		mainTextPanel.add(mainTextArea);
+		mainTextPanel.add(mainTextArea);  
 		
 		choiceButtonPanel = new JPanel();
 		choiceButtonPanel.setBounds(250, 350, 300, 150);
@@ -345,7 +359,14 @@ public class Main {
 
 	
 	
-	
+	public class ExitHandler implements ActionListener{
+
+		public void actionPerformed(ActionEvent event) {
+			
+			exitGame();
+		}
+		
+	}
 		
 	
 	
@@ -355,6 +376,7 @@ public class Main {
 		public void actionPerformed(ActionEvent event){
 			
 			createGameScreen();
+			
 		}
 	}
 	public class ChoiceHandler implements ActionListener{

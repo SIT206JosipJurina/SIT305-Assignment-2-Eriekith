@@ -1,0 +1,53 @@
+{
+
+	"Location01" : "Open Fields",
+	"Player" : ["Hero"],
+	"PLayerDetails" : {
+		"Hero" : {
+			"health" : 25,
+			"attack" : 1
+		}
+	},
+	"Dialog" : "You wake up in an open field..  you see a town near by and walk towards the gate when a gaurd approachs you. What do you do?",
+	"Characters" : ["gaurd01"],
+	"CharacterDetails" : {
+		"gaurd01" : {
+			"health" : 100,
+			"attack" : 3,
+			"dialog" : {
+				"dialog01" : {
+					"dialog" : "Hello stranger. I have never seen your face. I'm sorry but we cannot let a stranger enter our town.",
+					"actions" : {
+						"Keep talking" : "dialog:guard01:dialog02",
+						"Attack gaurd" : "attack:gaurd01:dialog03"
+					
+					
+					}
+				
+				},
+				"dialog02" : {
+					"dialog" : "Ok if you want to enter this town you must defeat a goblim and return the diamond ring he stole"
+				
+				},
+				"dialog03" : {
+					"dialog" : "Hey don't be stupid (You are hit for 3 damage)"
+					
+				}
+			
+			}
+		}
+	
+	
+	},
+	"actions" : {		
+		"Talk to guard" : "dialog:gaurd01:dialog01",
+		"Attack guard" : "attack:gaurd01:dialog03",
+		"Leave" :  "Location02"
+	},
+	
+	"Location02" : "South roads"
+	
+	
+
+
+}
