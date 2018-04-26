@@ -38,16 +38,15 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		JSONObject obj = JSONUtils.getJSONObjectFromFile("/openfields.json");
-		
+		//JSONObject obj = JSONUtils.getJSONObjectFromFile("/openfields.json");
+		//String[] names = JSONObject.getNames(obj);
 
 		new Main();
 	}
 	
 	public Main(){
 		
-		//Creating the Main Menu Screen
-		
+//******Creating the Main Menu Screen*************************************************************	
 		window = new JFrame();
 		window.setSize(800, 600);
 		//window.dispatchEvent(new WindowEvent(window, WindowEvent.WINDOW_CLOSING));
@@ -56,16 +55,18 @@ public class Main {
 		window.setLayout(null);
 		window.setVisible(true);
 		con = window.getContentPane();
+//************************************************************************************************	
 		
-		// Title 		
+//******Main Title********************************************************************************		
 		titleNamePanel = new JPanel();
 		titleNamePanel.setBounds(100, 100, 600, 150);
 		titleNamePanel.setBackground(Color.black);
 		titleNameLabel = new JLabel("Eriekith");
 		titleNameLabel.setForeground(Color.white);
 		titleNameLabel.setFont(titleFont);	
-		
-		//Start Button
+//************************************************************************************************	
+
+//******Start Button******************************************************************************
 		startButtonPanel = new JPanel();
 		startButtonPanel.setBounds(100, 400, 200, 100);
 		startButtonPanel.setBackground(Color.black);
@@ -76,8 +77,9 @@ public class Main {
 		startButton.setFont(normalFont);
 		startButton.addActionListener(tsHandler);
 		startButton.setFocusPainted(false);
+//************************************************************************************************		
 		
-		//Load Button
+//******Load Button*******************************************************************************
 		loadButtonPanel = new JPanel();
 		loadButtonPanel.setBounds(300, 400, 200, 100);
 		loadButtonPanel.setBackground(Color.black);
@@ -86,8 +88,9 @@ public class Main {
 		loadButton.setBackground(Color.black);
 		loadButton.setForeground(Color.white);
 		loadButton.setFont(normalFont);
+//************************************************************************************************		
 		
-		//Exit Button
+//******Exit Button*******************************************************************************
 		exitButtonPanel = new JPanel();
 		exitButtonPanel.setBounds(500, 400, 200, 100);
 		exitButtonPanel.setBackground(Color.black);
@@ -96,6 +99,7 @@ public class Main {
 		exitButton.setBackground(Color.black);
 		exitButton.setForeground(Color.white);
 		exitButton.setFont(normalFont);
+//************************************************************************************************
 		
 		titleNamePanel.add(titleNameLabel);
 		startButtonPanel.add(startButton);
@@ -108,9 +112,12 @@ public class Main {
 		con.add(exitButtonPanel);
 	}
 	public void exitGame() {
+		 exitButton = new JButton();
+		 exitButton.addActionListener(exitHandler);
 		 window.dispose();
 	}
 	
+//******New screen created when pressing the start button*****************************************
 	public void createGameScreen(){
 		
 		titleNamePanel.setVisible(false);
@@ -193,7 +200,7 @@ public class Main {
 		playerPanel.add(weaponLabelName);
 
 		playerSetup();
-
+//************************************************************************************************
 	}
 	public void playerSetup(){
 		playerHP = 15;

@@ -5,10 +5,19 @@
 	"PLayerDetails" : {
 		"Hero" : {
 			"health" : 25,
+			"weapon" : "item01:startweapon",
 			"attack" : 1
 		}
 	},
-	"Dialog" : "You wake up in an open field..  you see a town near by and walk towards the gate when a gaurd approachs you. What do you do?",
+	"Item" : ["item01"],
+	"ItemDescription" : {
+		"item01" : {
+			"startweapon" : "Knife",
+			"longsword" : "Longsword",
+			"ring" : "silverring"
+		}
+	},
+	"Narrator01" : "You wake up in an open field..  you see a town near by and walk towards the gate when a gaurd approachs you. What do you do?",
 	"Characters" : ["gaurd01"],
 	"CharacterDetails" : {
 		"gaurd01" : {
@@ -18,8 +27,8 @@
 				"dialog01" : {
 					"dialog" : "Hello stranger. I have never seen your face. I'm sorry but we cannot let a stranger enter our town.",
 					"actions" : {
-						"Keep talking" : "dialog:guard01:dialog02",
-						"Attack gaurd" : "attack:gaurd01:dialog03"
+						"Keep talking" : "guard01:dialog02",
+						"Attack gaurd" : "Hero:attack:gaurd01:dialog03"
 					
 					
 					}
@@ -32,6 +41,17 @@
 				"dialog03" : {
 					"dialog" : "Hey don't be stupid (You are hit for 3 damage)"
 					
+				},
+				"Hero has ring" : {
+					"hero" : "Hero:item01:ring",
+					"gaurd01" : {
+						"dialog04" : "You killed that goblim, that ring is proof welcome to our town",
+						"actions" : {
+							"Talk to gaurd" : "Hero:item01:ring:gaurd01:dialog04",
+							"Attack gaurd" : "attack:gaurd01:dialog03",
+							"Leave" : "Location02"
+						}
+					}
 				}
 			
 			}
@@ -45,7 +65,60 @@
 		"Leave" :  "Location02"
 	},
 	
-	"Location02" : "South roads"
+	"Location02" : "Crossroads",
+	"Narrator02" : "You are at a crossroad, If you go south you will go back towards the town",
+	"South" : {
+		"actions" : {
+			"Go south" : "location01"
+		}
+	
+	},
+	"Location03" : "River",
+	"Narrator03" : "There is a river, You drink the water and rest at the riverside. (Your HP is recovered by 2)",
+	"North" : {
+		"actions" : {
+			"Go north" : "Location03:Narrator03"		
+		}
+	},
+	"Location04" : "Forest",
+	"Narrator04" : "You walked into a forest and found a long sword! ( You obtain a long sword)",
+	"HeroWeapon" : {
+		"weapon" : "item01:longsword",
+		"damage" : "Hero:attack:5"
+	},
+	"East" : {
+		"actions" : {
+			"Go east" : "Location04:Narrator04"
+		}
+	},
+	"Enemy" : ["Goblin"],
+	"EnemyDetails" : {
+		"Goblin" : {
+			"health" : 20,
+			"dead" : 0,
+			"attack" : 3,
+			"dialog" : {
+				"dialog01" : "You attack the goblim and did 6 damage ",
+				"actions" : {
+					"Fight" : "Goblim:dialog01:dialog02",
+					"Run" : "Location02:Narrator02"
+				},
+				"dialog02" : "The goblim strikes back and did 5 damage",
+				"drop ring" : {
+					"Goblim dead" : "Goblin:dead",
+					"silver ring" : "item01:ring",
+					"dialog" : "You defeated the Golbim!!!, He droped a ring, (You obtained a silver ring)"
+				}
+			}
+		}
+	},
+	"Location05" : "Cave",
+	"Narrator05" : "You encounter a Goblim!!",
+	"West" : {
+		"actions" : {
+			"Go West" : "Location05:Narrator05"
+		}
+	}
 	
 	
 
