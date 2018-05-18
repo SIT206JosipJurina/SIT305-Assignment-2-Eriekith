@@ -1,7 +1,0 @@
-This File will contain an update log with the date and what update I have done.
-
-21/04/2018
--First copy of game created in python
--Working title menu
-
-22/04/2018
