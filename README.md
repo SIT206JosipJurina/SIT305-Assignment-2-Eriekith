@@ -7,6 +7,8 @@
 -I have started working on it using Eclipse
 The Game is about a hero who enters a new world and his goal is to collect 4 pieces of a dagger and defeat the demon king.
 
+-All the code was done myself.
+
 -SIT305-Assignment-2-Eriekith-HEAD\SIT305 Ass2\src\com\tcg\json this directory is for the java files , MAIN.Java
 
 -SIT305-Assignment-2-Eriekith-HEAD\SIT305 Ass2\assets this is for the json files
