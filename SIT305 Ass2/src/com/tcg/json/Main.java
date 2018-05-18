@@ -1533,7 +1533,7 @@ public class Main {
 				}
 				break;
 			case "dklose" :
-				switch(yourChoice) {
+				switch(yourChoice) { //lose
 				case "c1" : playerSetup(); break;
 				}
 				break;

@@ -17,7 +17,7 @@
 			"ring" : "silverring"
 		}
 	},
-	"Narrator01" : "You wake up in an open field..  you see a town near by and walk towards the gate when a gaurd approachs you. What do you do?",
+	"Narrator01" : "You wake up only to be lieing on sand.\nYou are at the gate of a castle. \nA guard is standing in front of you. \n (Wait... Wait...)\n (Doesn't this feel familiar) \n Your memomry seems blank, only remembering to find the sacred dagger\n\n ( What do you do?)", 			 
 	"Characters" : ["gaurd01"],
 	"CharacterDetails" : {
 		"gaurd01" : {

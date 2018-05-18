@@ -17,7 +17,8 @@
 			"ring" : "silverring"
 		}
 	},
-	"Narrator01" : "You wake up in an open field..  you see a town near by and walk towards the gate when a gaurd approachs you. What do you do?",
+	"Narrator01" : "It seems I am in some kind of Tunnel Mine and appear to be in the center of a crossroad.\n There are signs saying each direction which one shall I go?",
+				
 	"Characters" : ["gaurd01"],
 	"CharacterDetails" : {
 		"gaurd01" : {
