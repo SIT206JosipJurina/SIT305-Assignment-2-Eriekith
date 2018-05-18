@@ -13,7 +13,9 @@ The Game is about a hero who enters a new world and his goal is to collect 4 pie
 
 -SIT305-Assignment-2-Eriekith-HEAD\SIT305 Ass2\assets this is for the json files
 
--To run the game you need to have eclipse, go file, import, general, existing projects into workspace, add directory of game folder, finish
+-SIT305-Assignment-2-Eriekith-HEAD\SIT305 Ass2\lib - contains the library for the json/java files
+
+-To run the game you need to have eclipse, go file, import, general, existing projects into workspace, add directory of game folder, finish, then when the game is loaded, click the run button.
 
 
 https://github.com/SIT206JosipJurina/SIT305-Assignment-2-Eriekith github link
