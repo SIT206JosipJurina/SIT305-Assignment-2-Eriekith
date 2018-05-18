@@ -13,3 +13,5 @@ The Game is about a hero who enters a new world and his goal is to collect 4 pie
 
 -To run the game you need to have eclipse, go file, import, general, existing projects into workspace, add directory of game folder, finish
 
+
+https://github.com/SIT206JosipJurina/SIT305-Assignment-2-Eriekith github link
